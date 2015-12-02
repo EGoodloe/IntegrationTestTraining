@@ -68,7 +68,7 @@ namespace UnitTestWorkshop.Data.IntegrationTests.Repositories
         }
 
         [TestMethod]
-        public void Should_Retrieve_Single_User_by_Email()
+        public void When_Retrieving_Single_User_by_Email_Return_User()
         {
             //Arrange
             var expected = _testData.First();

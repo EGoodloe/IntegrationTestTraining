@@ -80,7 +80,7 @@ namespace UnitTestWorkshop.Business.IntegrationTests.Providers
         }
 
         [TestMethod]
-        public void Retrieve_Account_With_Valid_Credentials()
+        public void When_Retrieveing_Account_With_Valid_Credentials_Return_Account()
         {
             //Data Layer Arrange
             var dataUser = new User
