@@ -4,6 +4,7 @@ using Moq;
 namespace QuickReferenceTests.MOQ_Reference
 {
     [TestClass]
+    [Ignore]
     public class MOQ_Properties_Stubs
     {
         [TestMethod]
