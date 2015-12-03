@@ -37,7 +37,7 @@ namespace UnitTestWorkshop.Business.IntegrationTests.Providers
 
             //needed for auth provider
             MockRetrievableAuthyId = new Mock<IBulkRetrievable<ByEncodedUserId, UserAuthentication>>();
-            MockUpdatableAuth = new Mock<IUpdatable<UserAuthentication>>();
+            //MockUpdatableAuth = new Mock<IUpdatable<UserAuthentication>>(); --Moved to SetupSubject to keep test from tracking additional calls.
             MockCreatableAuth = new Mock<ICreatable<UserAuthentication>>();
             MockDeletableAuth = new Mock<IDeletable<UserAuthentication>>();
 
@@ -52,6 +52,8 @@ namespace UnitTestWorkshop.Business.IntegrationTests.Providers
 
         protected void SetupSubject()
         {
+            MockUpdatableAuth = new Mock<IUpdatable<UserAuthentication>>();
+
             _passwords = new Passwords();
             _translateUserUserAuth = new DataUserToAccountUserTranslator();
 
